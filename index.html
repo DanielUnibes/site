@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio | Daniel Felix</title>
+</head>
+<body>
+
+<div class="main-container">
+    <aside class="sidebar">
+        <div class="profile-info">
+            <img src="imagens/Hugh!! (with better quality).webp" alt="Daniel Felix" class="profile-img">
+            <h1>Daniel Felix Almeida</h1>
+            <p>Engenharia & Digital Design</p>
+        </div>
+
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'sobre')">Sobre</button>
+            <button class="tab-btn" onclick="openTab(event, 'habilidades')">Habilidades</button>
+            <button class="tab-btn" onclick="openTab(event, 'projetos')">Projetos</button>
+            <button class="tab-btn" onclick="openTab(event, 'contatos')">Contato</button>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        
+        <div id="sobre" class="tab-content active">
+            <h2>Sobre Mim</h2>
+            <p>Sou um profissional multidisciplinar que une o <strong>rigor técnico da Engenharia Mecânica</strong> à <strong>fluidez do Design Digital</strong>. Meu foco é desenvolver soluções que não são apenas funcionais, mas visualmente impactantes.</p>
+            <p>Atualmente em especialização em <strong>Web Design Front-End</strong> (2026), foco na criação de interfaces de alta performance e experiências dinâmicas de usuário (UX/UI).</p>
+            <p><strong>Localização:</strong> São Paulo, SP<br>
+               <strong>Idiomas:</strong> Inglês Intermediário / Português</p>
+        </div>
+
+        <div id="habilidades" class="tab-content">
+            <h2>Habilidades & Tech</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <strong>Web Front-End</strong>
+                    Domínio de HTML5, CSS3 e interfaces responsivas com foco em micro-animações e efeitos de scroll.
+                </div>
+                <div class="skill-item">
+                    <strong>IA & Processo Criativo</strong>
+                    Uso avançado de Inteligência Artificial como suporte estratégico para design e produtividade.
+                </div>
+                <div class="skill-item">
+                    <strong>Audiovisual Dinâmico</strong>
+                    Edição e mixagem profissional focada em formatos de alta retenção (Reels e Shorts).
+                </div>
+                <div class="skill-item">
+                    <strong>Design de Moda & Têxtil</strong>
+                    Desenvolvimento de conceitos autorais e sustentáveis, unindo arte e técnica.
+                </div>
+            </div>
+        </div>
+
+        <div id="projetos" class="tab-content">
+            <h2>Projetos Selecionados</h2>
+            <div class="project-grid">
+                <a href="https://github.com/DanielUnibes" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Interface & Web</h3>
+                        <p>Desenvolvimento de Landing Pages focadas em experiência do usuário.</p>
+                    </div>
+                </a>
+                <a href="https://www.kittl.com/design/mobiliza-hood-i3A7zXuv" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Fashion Design</h3>
+                        <p>Criação de vestuário contemporâneo e identidade visual para marcas.</p>
+                    </div>
+                </a>
+                <a href="https://www.bandlab.com/dwnete" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3>Sound Engineering</h3>
+                        <p>Produção e engenharia de som para conteúdo audiovisual.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="contatos" class="tab-content">
+            <h2>Vamos Conversar?</h2>
+            <p>Disponível para projetos desafiadores e colaborações inovadoras.</p>
+            <div style="margin-top: 20px;">
+                <p>📱 <strong>WhatsApp:</strong><br>
+                <a href="https://wa.me/5511913613238" target="_blank" class="contact-link">11 91361-3238</a></p>
+                <p>✉️ <strong>E-mail:</strong><br>
+                <a href="mailto:danielfalmeida1808@gmail.com" class="contact-link">danielfalmeida1808@gmail.com</a></p>
+            </div>
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ddd;">
+            <p style="font-size: 0.85rem; color: #aaa;">Daniel Felix | São Paulo, Brasil | © 2026</p>
+        </div>
+    </main>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        let contents = document.getElementsByClassName("tab-content");
+        let buttons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < contents.length; i++) {
+            contents[i].classList.remove("active");
+            contents[i].style.display = 'none';
+        }
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+        }
+        const activeContent = document.getElementById(tabName);
+        activeContent.style.display = 'block';
+        setTimeout(() => activeContent.classList.add("active"), 10);
+        evt.currentTarget.classList.add("active");
+        document.querySelector('.content-area').scrollTop = 0;
+    }
+</script>
+
+</body>
+</html>
